@@ -1,0 +1,14 @@
+<!-- header -->
+<%- include("./partials/header") %>
+
+
+<!-- create a form to capture blog title and body -->
+
+<form action="/submit" method="POST">
+    <input type="text" id="pTitle" name = "pTitle" placeholder="Enter Post Title her">
+    <textarea name="pBody" id="pBody" placeholder="Write your post here"></textarea>
+    <input type="submit" value="Submit">
+</form>
+
+<!-- footer -->
+<%- include("./partials/footer") %>

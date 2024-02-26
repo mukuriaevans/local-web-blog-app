@@ -1,0 +1,32 @@
+<!-- header -->
+<%- include("./partials/header") %>
+
+
+<h1>Welcome to my blog post</h1>
+
+<!-- add a button to composed page-->
+
+<a href="/compose"><button>Compose a blog</button></a>
+
+
+<!-- check if there posts to display, if not, indicate no posts to display -->
+<% if (locals.blogs) { %>
+    <!-- create a list of posts -->
+    <% blogs.forEach((blog) => { %>
+        
+            <h3><%= blog.postTitle %></h3>
+            <p><%= blog.postBody %></p> 
+        
+    <% }) %>
+
+<% } else { %>
+    <!-- indicate no posts to display -->
+    <h4>No posts to display here</h4>
+
+<% } %>
+
+
+
+
+<!-- footer-->
+<%- include("./partials/footer") %>
